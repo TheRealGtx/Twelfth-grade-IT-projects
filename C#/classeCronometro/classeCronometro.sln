@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classeCronometro", "classeCronometro\classeCronometro.csproj", "{FAB8D8DE-7D10-4027-BFAD-B5F5337F2641}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "sharedCronometro", "sharedCronometro\sharedCronometro.shproj", "{EB82B3A5-A5A2-4386-9EDB-CB97EE71BD02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testConsoleCronometro", "testConsoleCronometro\testConsoleCronometro.csproj", "{33927512-FA52-4941-B065-0505EE493D15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB8D8DE-7D10-4027-BFAD-B5F5337F2641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB8D8DE-7D10-4027-BFAD-B5F5337F2641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB8D8DE-7D10-4027-BFAD-B5F5337F2641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB8D8DE-7D10-4027-BFAD-B5F5337F2641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33927512-FA52-4941-B065-0505EE493D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33927512-FA52-4941-B065-0505EE493D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33927512-FA52-4941-B065-0505EE493D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33927512-FA52-4941-B065-0505EE493D15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8030D3E-0B85-4717-9A9A-4DA6D3B9EFEC}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		sharedCronometro\sharedCronometro.projitems*{33927512-fa52-4941-b065-0505ee493d15}*SharedItemsImports = 4
+		sharedCronometro\sharedCronometro.projitems*{eb82b3a5-a5a2-4386-9edb-cb97ee71bd02}*SharedItemsImports = 13
+		sharedCronometro\sharedCronometro.projitems*{fab8d8de-7d10-4027-bfad-b5f5337f2641}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

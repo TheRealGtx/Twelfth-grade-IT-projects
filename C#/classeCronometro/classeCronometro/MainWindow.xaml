@@ -1,0 +1,21 @@
+﻿<Window x:Class="classeCronometro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:classeCronometro"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="404" Width="754">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="17,197,0,0" VerticalAlignment="Top" Click="btnStart_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="67,197,0,0" VerticalAlignment="Top" Click="btnStop_Click"/>
+        <Label x:Name="lblOutput" Content="Tempo trascorso: " HorizontalAlignment="Left" Margin="363,194,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="116,197,0,0" VerticalAlignment="Top" Click="btnReset_Click"/>
+        <TextBox x:Name="txtInizio" HorizontalAlignment="Left" Margin="121,134,0,0" TextWrapping="Wrap" Text="tempoinizio" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnMostra" Content="Mostra tempo trascorso" HorizontalAlignment="Left" Margin="181,197,0,0" VerticalAlignment="Top" Click="btnMostra_Click" IsEnabled="False"/>
+        <Button x:Name="btnInserisci" Content="Inserisci" HorizontalAlignment="Left" Margin="273,133,0,0" VerticalAlignment="Top" Click="btnInserisci_Click"/>
+        <Label Content="Tempo (in secondi): " HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,0.071"/>
+        <Label Content="Manzi Giuliano 4i" HorizontalAlignment="Left" Margin="598,339,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

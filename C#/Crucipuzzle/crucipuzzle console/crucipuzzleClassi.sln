@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crucipuzzleClassi", "crucipuzzleClassi\crucipuzzleClassi.csproj", "{51F84096-5DC8-4A33-8663-E1866A8C90E4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProjectCrucipuzzle", "SharedProjectCrucipuzzle\SharedProjectCrucipuzzle.shproj", "{78C9EC9D-032C-4FA0-BD62-CEED10064500}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51F84096-5DC8-4A33-8663-E1866A8C90E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F84096-5DC8-4A33-8663-E1866A8C90E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F84096-5DC8-4A33-8663-E1866A8C90E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F84096-5DC8-4A33-8663-E1866A8C90E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAE865C7-88B5-4D5D-8953-CF9A5D5857A7}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedProjectCrucipuzzle\SharedProjectCrucipuzzle.projitems*{51f84096-5dc8-4a33-8663-e1866a8c90e4}*SharedItemsImports = 4
+		SharedProjectCrucipuzzle\SharedProjectCrucipuzzle.projitems*{78c9ec9d-032c-4fa0-bd62-ceed10064500}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

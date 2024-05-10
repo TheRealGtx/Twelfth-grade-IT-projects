@@ -1,0 +1,36 @@
+[
+   {
+   "Nome": "Mario",
+   "Cognome": "Rossi",
+   "Altezza": 1.75,
+   "Peso": 85
+   }
+   ,
+   {
+   "Nome": "Luigi",
+   "Cognome": "Bianchi",
+   "Altezza": 1.56,
+   "Peso": 60
+   }
+   ,
+   {
+   "Nome": "Carlo",
+   "Cognome": "Neri",
+   "Altezza": 1.80,
+   "Peso": 90
+   }
+   ,
+   {
+   "Nome": "Franco",
+   "Cognome": "Forte",
+   "Altezza": 1.20,
+   "Peso": 80
+   }
+   ,
+   {
+   "Nome": "Napoleone",
+   "Cognome": "Bonaparte",
+   "Altezza": 1.40,
+   "Peso": 10
+   }
+]

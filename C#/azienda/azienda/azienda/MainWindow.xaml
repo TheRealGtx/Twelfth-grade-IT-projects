@@ -1,0 +1,81 @@
+﻿<Window x:Class="Azienda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Azienda"
+        mc:Ignorable="d"
+        Title="Gestionale azienda" Height="522" Width="1082" ResizeMode="NoResize" Loaded="WindowLoaded" Background="#FFE1E5F2">
+    <Grid x:Name="grdBase" Background="#FFE1E5F2" Margin="0,0,0,-16">
+        <Label x:Name="lblAzienda" Content="Azienda" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="327,0,0,0" FontFamily="Arial Rounded MT Bold"/>
+        <RadioButton x:Name="rdCliente" Content="Cliente" HorizontalAlignment="Left" Margin="346,78,0,0" VerticalAlignment="Top" Checked="rdCliente_Checked" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="16" BorderThickness="2,2,2,2"/>
+        <RadioButton x:Name="rdDipendente" Content="Dipendente" HorizontalAlignment="Left" Margin="224,78,0,0" VerticalAlignment="Top" Checked="rdDipendente_Checked" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="16" BorderThickness="2,2,2,2"/>
+        <Label x:Name="lblNome" Content="Nome:" HorizontalAlignment="Left" Margin="181,116,0,0" VerticalAlignment="Top" Visibility="Hidden" FontFamily="Arial Rounded MT Bold"
+               />
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="229,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontWeight="Light" GotFocus="txtNome_GotFocus" Visibility="Hidden" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+        <Label x:Name="lblCognome" HorizontalAlignment="Left" Margin="362,116,0,0" VerticalAlignment="Top" Visibility="Hidden" Content="Cognome:" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtCognome" HorizontalAlignment="Left" Margin="432,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontWeight="Light" GotFocus="txtCognome_GotFocus" Visibility="Hidden" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+        <Grid x:Name="grdCliente" Margin="173,142,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="224" Width="411" Visibility="Hidden"
+              
+              >
+            <Label x:Name="lblId" Content="ID Cliente: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <Label x:Name="lblAcquisti" Content="Acquisti effettuati" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <ListBox x:Name="lstAcquisti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,67,0,0" Width="182" Height="111" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Rectangle HorizontalAlignment="Center" Height="136" Margin="0,48,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label x:Name="lblAggiungiAcquisto" Content="Aggiungi acquisto" HorizontalAlignment="Left" Margin="210,41,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <Label x:Name="lblNomeArticolo" Content="Nome articolo" HorizontalAlignment="Left" Margin="210,72,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <TextBox x:Name="txtNomeArticolo" HorizontalAlignment="Left" Margin="306,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" FontStyle="Italic" FontWeight="Light" GotFocus="txtNomeArticolo_GotFocus" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Label x:Name="lblPrezzoArticolo" Content="Prezzo articolo" HorizontalAlignment="Left" Margin="210,107,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <TextBox x:Name="txtNomeArticolo_Copy" HorizontalAlignment="Left" Margin="306,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" FontStyle="Italic" FontWeight="Light" GotFocus="txtNomeArticolo_Copy_GotFocus" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Button x:Name="btnAggiungiArticolo" Content="Aggiungi articolo" HorizontalAlignment="Left" Margin="250,150,0,0" VerticalAlignment="Top" Click="btnAggiungiArticolo_Click" FontFamily="Arial Rounded MT Bold" Height="22" Width="120" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Label x:Name="lblTotaleSpeseCliente" Content="Totale delle spese effettuate: " HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
+        <Button x:Name="btnPrimo" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="162,404,0,0" VerticalAlignment="Top" Height="30" Width="28" Click="btnPrimo_Click" Background="#FFBFDBF7" IsEnabled="False" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnIndietro" Content="&lt;" HorizontalAlignment="Left" Margin="239,404,0,0" VerticalAlignment="Top" Height="30" Width="28" Click="btnIndietro_Click" Background="#FFBFDBF7" IsEnabled="False" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnAvanti" Content="&gt;" HorizontalAlignment="Left" Margin="515,404,0,0" VerticalAlignment="Top" Height="30" Width="28" IsEnabled="False" Click="btnAvanti_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnUltimo" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="587,404,0,0" VerticalAlignment="Top" Height="30" Width="28" IsEnabled="False" Click="btnUltimo_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnAggiungi" Content="Aggiungi" HorizontalAlignment="Left" Margin="304,403,0,0" VerticalAlignment="Top" Height="32" Click="btnAggiungi_Click" Background="#FFBFDBF7" IsEnabled="False" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Width="67" BorderThickness="2,2,2,2"/>
+        <Grid x:Name="grdDipendente" Margin="182,147,217,121" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden"
+>
+            <Label x:Name="lblStipendioAnnuale" Content="Stipendio annuale (€)" HorizontalAlignment="Left" Margin="1,36,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <TextBox x:Name="txtStipendioAnnuale" HorizontalAlignment="Left" Margin="139,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontStyle="Italic" FontWeight="Light" GotFocus="txtStipendioAnnuale_GotFocus" FontFamily="Arial Rounded MT Bold" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Label x:Name="lblIDDipendente" Content="ID Dipendente: " HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
+        <Grid x:Name="grdAzienda" Margin="32,98,26,100" Visibility="Hidden"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblListaClienti" Content="Lista clienti" HorizontalAlignment="Left" Margin="127,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <ListBox x:Name="lstClienti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,31,0,0" Width="265" Height="193" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Rectangle HorizontalAlignment="Left" Height="226" Margin="328,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
+            <Label x:Name="lblListaDipendenti" Content="Lista dipendenti" HorizontalAlignment="Left" Margin="439,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <ListBox x:Name="lstDipendenti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="354,31,0,0" Width="264" Height="193" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" BorderThickness="2,2,2,2"/>
+            <Label x:Name="lblTotaleEntrate" Content="Totale delle entrate: " HorizontalAlignment="Left" Margin="254,229,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <Label x:Name="lblTotaleProfitto" Content="Totale del profitto: " HorizontalAlignment="Left" Margin="481,229,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+            <Label x:Name="lblTotaleSpese1" Content="Totale delle spese: " HorizontalAlignment="Left" Margin="26,229,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
+        <RadioButton x:Name="rdAzienda" Content="Azienda" HorizontalAlignment="Left" Margin="444,78,0,0" VerticalAlignment="Top" Checked="rdAzienda_Checked" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="16" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnCarica" Content="Carica configurazione" HorizontalAlignment="Left" Margin="726,176,0,0" VerticalAlignment="Top" Width="247" Click="btnCarica_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Height="33" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnEsporta" Content="Esporta configurazione" HorizontalAlignment="Left" Margin="726,213,0,0" VerticalAlignment="Top" Width="247" Click="btnEsporta_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Height="33" BorderThickness="2,2,2,2"/>
+        <Label x:Name="lblSalvataggio" Content="Salvataggio dati:" HorizontalAlignment="Left" Margin="722,152,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblIstruzioni" Content="Selezionare il tipo di visualizzazione dai radiobutton&#xD;&#xA;qui sopra per iniziare ad usare il programma" HorizontalAlignment="Left" Margin="182,219,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Arial Rounded MT Bold" Visibility="Hidden"/>
+        <Label x:Name="lblIndice" Content="Indice: " HorizontalAlignment="Left" Margin="162,367,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <Button x:Name="btnElimina" Content="Elimina" HorizontalAlignment="Left" Margin="407,403,0,0" VerticalAlignment="Top" Width="57" Height="32" IsEnabled="False" Click="btnElimina_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnOrdinaPerCognome" Content="Ordina clienti per cognome" HorizontalAlignment="Left" Margin="726,275,0,0" VerticalAlignment="Top" Width="247" Click="btnOrdinaPerCognome_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Height="33" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnOrdinaPerStipendio" Content="Ordina dipendenti per stipendio" HorizontalAlignment="Left" Margin="726,313,0,0" VerticalAlignment="Top" Click="btnOrdinaPerStipendio_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Height="33" Width="247" BorderThickness="2,2,2,2"/>
+        <Label x:Name="lblOrdinamenti" Content="Ordinamenti:" HorizontalAlignment="Left" Margin="721,251,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="lblCrediti" Content="Manzi Giuliano, 4i" HorizontalAlignment="Left" Margin="726,69,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Button x:Name="btnOrdinaClientiReverse" Content="Ordina clienti al contrario" HorizontalAlignment="Left" Margin="726,352,0,0" VerticalAlignment="Top" Width="247" Click="btnOrdinaClientiReverse_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Height="33" BorderThickness="2,2,2,2"/>
+        <Button x:Name="btnOrdinaImpiegatiStipendioSopraDuemila" Content="Mostra impiegati con stipendio sopra i 2000€" HorizontalAlignment="Left" Margin="726,397,0,0" VerticalAlignment="Top" Height="33" Click="btnOrdinaImpiegatiStipendioSopraDuemila_Click" Background="#FFBFDBF7" BorderBrush="#FF1F7A8C" FontFamily="Arial Rounded MT Bold" FontSize="14" Width="317" BorderThickness="2,2,2,2"/>
+    </Grid>
+</Window>

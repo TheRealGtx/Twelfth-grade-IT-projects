@@ -1,0 +1,25 @@
+﻿<Window x:Class="crucipuzzleConTutore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:crucipuzzleConTutore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="gridBottoni" Margin="326,21,21,36"/>
+        <Label x:Name="lblCrediti" Content="Tutore: Lorenzo Serra, Tutelato: Manzi Giuliano, 4i" HorizontalAlignment="Left" Margin="506,398,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnControlla" Content="Conferma" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Click="btnControlla_Click" IsEnabled="False"/>
+        <Button x:Name="btnCarica" Content="Carica" HorizontalAlignment="Left" Margin="138,59,0,0" VerticalAlignment="Top" Click="btnCarica_Click"/>
+        <Label Content="1) Carica il cruciverba" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl2" Content="2) Scegli la parola da cercare e&#xA;selezionala nel cruciverba" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" IsTabStop="True"/>
+        <Button x:Name="btnSoluzione" Content="Mostra soluzione" HorizontalAlignment="Left" Margin="139,383,0,0" VerticalAlignment="Top" Click="btnSoluzione_Click"/>
+        <Label x:Name="lbl2_Copy1" Content="4) Se credi di aver trovato tutte le parole&#xA;inserisci la soluzione" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" IsTabStop="True"/>
+        <Label x:Name="lblNonTrovata" Content="" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPercorso" HorizontalAlignment="Left" Margin="10,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lstSoluzioni" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="1,131,608,177" SelectionChanged="lstSoluzioni_SelectionChanged" IsEnabled="False"/>
+        <Label Content="3) Premi qui per confermare la tua scelta" HorizontalAlignment="Left" Margin="15,264,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSoluzione" HorizontalAlignment="Left" Margin="12,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
