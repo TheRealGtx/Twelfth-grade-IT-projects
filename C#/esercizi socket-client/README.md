@@ -1,1 +1,1 @@
-To run this exercises, firstly open and run the server ("esercizioSocket"), then open and run the client ("esercizioSocketClient")
+To run this exercises, first of all open and run the server ("esercizioSocket"), then open and run the client ("esercizioSocketClient")
